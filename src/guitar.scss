@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.guitar {
+    margin: 33%;
+    width: 50%;
+    // transform: rotate(90deg);
+    border: none;
+    .string {
+        margin: 40px 0 0;
+        border: 0;
+        background-color: #000;
+        cursor: pointer;
+        &:first-child {
+            margin: 0;
+        }
+    }
+    .string-size-1 {
+        height: 1px;
+    }
+    .string-size-2 {
+        height: 2px;
+    }
+    .string-size-3 {
+        height: 3px;
+    }
+    .string-size-4 {
+        height: 4px;
+    }
+    .string-size-5 {
+        height: 5px;
+    }
+    .string-size-6 {
+        height: 6px;
+    }
+    &.with-nut {
+        border-left: 8px solid #000;
+    }
+}
