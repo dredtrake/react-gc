@@ -5,8 +5,8 @@
 }
 .guitar {
     position: relative;
-    width: 608px;
-    height: 6 + (40 * 5px);
+    width: ($fretWidth * 4) + 6;
+    height: 6 + ($stringSpacing * 5);
     border: none;
     margin: 5%;
     .string {
@@ -23,7 +23,7 @@
     }
     @for $i from 0 through 6 {
         .string-size-#{$i + 1} {
-            top: $i * 40px;
+            top: $i * $stringSpacing;
             height: #{$i + 1}px;
         }
     }
@@ -32,7 +32,7 @@
     }
     &.rotate {
         transform: rotate(90deg);
-        margin: 25% 0;
+        margin: 22% 0 0 -10%;
     }
     .guitar-fret {
         border-right: 2px solid #000;
@@ -40,7 +40,7 @@
         height: 100%;
         top: 0;
         position: absolute;
-        @for $i from 0 through 4 {
+        @for $i from 0 through 12 {
             &.position-#{$i + 1} {
                 left: $fretWidth * $i;
             }

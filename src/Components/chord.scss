@@ -19,12 +19,12 @@
        @for $j from 0 through 6 {
             .position-#{$j + 1}-#{$i} {
                 @if($i == 0) {
-                    left: -35px;
+                    left:  - (15px + $dotWidth);
                 } 
                 @else {
                     left: ($fretWidth * ($i - 1)) + ($fretWidth / 2) - ($dotWidth / 2);
                 }
-                top: (40 * $j) + (($j + 1) / 2) - ($dotWidth / 2);
+                top: ($stringSpacing * $j) + (($j + 1) / 2) - ($dotWidth / 2);
             }
         }
     }
