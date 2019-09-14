@@ -1,5 +1,5 @@
 import React from 'react';
-import './chord.scss';
+import '../scss/chord.scss';
 
 const defaultProps = {
     chord: {

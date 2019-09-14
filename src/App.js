@@ -1,5 +1,5 @@
 import React from 'react';
-import './guitar.scss';
+import './scss/guitar.scss';
 import GuitarNeck from './Components/GuitarNeck';
 
 function App() {
