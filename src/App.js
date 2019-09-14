@@ -3,11 +3,7 @@ import './guitar.scss';
 import GuitarNeck from './Components/GuitarNeck';
 
 function App() {
-  return (
-    <div className="guitar with-nut">
-      <GuitarNeck />
-    </div>
-  );
+  return (<GuitarNeck />);
 }
 
 export default App;

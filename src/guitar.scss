@@ -1,40 +1,49 @@
+@import 'variables';
+
 * {
     box-sizing: border-box;
 }
-
 .guitar {
-    margin: 33%;
-    width: 50%;
-    // transform: rotate(90deg);
+    position: relative;
+    width: 608px;
+    height: 6 + (40 * 5px);
     border: none;
+    margin: 5%;
     .string {
-        margin: 40px 0 0;
+        position: absolute;
+        left: 0;
+        margin: 0;
         border: 0;
+        width: 100%;
         background-color: #000;
         cursor: pointer;
         &:first-child {
             margin: 0;
         }
     }
-    .string-size-1 {
-        height: 1px;
-    }
-    .string-size-2 {
-        height: 2px;
-    }
-    .string-size-3 {
-        height: 3px;
-    }
-    .string-size-4 {
-        height: 4px;
-    }
-    .string-size-5 {
-        height: 5px;
-    }
-    .string-size-6 {
-        height: 6px;
+    @for $i from 0 through 6 {
+        .string-size-#{$i + 1} {
+            top: $i * 40px;
+            height: #{$i + 1}px;
+        }
     }
     &.with-nut {
         border-left: 8px solid #000;
+    }
+    &.rotate {
+        transform: rotate(90deg);
+        margin: 25% 0;
+    }
+    .guitar-fret {
+        border-right: 2px solid #000;
+        width: $fretWidth;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        @for $i from 0 through 4 {
+            &.position-#{$i + 1} {
+                left: $fretWidth * $i;
+            }
+        }
     }
 }
