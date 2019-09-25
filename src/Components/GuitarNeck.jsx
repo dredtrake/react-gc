@@ -19,11 +19,7 @@ const GuitarNeck = ({ chord: { name, positions } }, ...props) => (
             <Chord positions={positions}/>
         </div>
         <h2>{name}</h2>
-        {
-            chordsDictionary.map(item => (
-                <div>{item.name}</div>
-            ))
-        }
+        {chordsDictionary.map(item => (<button>{item.name}</button>))}
     </div>
 );
 console.log(chordsDictionary);
