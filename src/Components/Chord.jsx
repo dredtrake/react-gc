@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import '../scss/chord.scss';
 
 const defaultProps = {
@@ -14,16 +15,25 @@ const defaultProps = {
     },
 };
 
-const Chord = () => {
-    const { chord: { positions } } = defaultProps;
+const Chord = ({ positions }) => {
     return (
         <div className="chord">
             { positions.map(item => {
                 const c = item.f ? ' filled' : '';
-                return (<div className={`dot position-${item.p}${c}`} />);
+                return (<div key={item.p} className={`dot position-${item.p}${c}`} />);
             })}
         </div>
     );
 };
 
+// const mapStateToProps = ({ chord }) => {
+//     console.log(chord);
+//     return {
+//         positions: (chord && chord.positions) || defaultProps.chord.positions,
+//     };
+// };
+
+// export default connect(
+    // mapStateToProps,
+// )(Chord);
 export default Chord;
