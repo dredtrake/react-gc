@@ -20,6 +20,28 @@ const Am = {
     ],
 };
 
+const C = {
+    name: 'C',
+    positions: [
+        { p: '1-0', f: false },
+        { p: '2-1', f: true },
+        { p: '3-0', f: false },
+        { p: '4-2', f: true },
+        { p: '5-3', f: true },
+        { p: '6-0', f: false },
+    ],
+};
+
+const D = {
+    name: 'D',
+    positions: [
+        { p: '1-2', f: true },
+        { p: '2-3', f: true },
+        { p: '3-2', f: true },
+        { p: '4-0', f: false },
+    ],
+};
+
 const E = {
     name: 'E',
     positions: [
@@ -32,4 +54,16 @@ const E = {
     ],
 };
 
-export default [A, Am, E];
+const Em = {
+    name: 'Em',
+    positions: [
+        { p: '1-0', f: false },
+        { p: '2-0', f: false },
+        { p: '3-0', f: false },
+        { p: '4-2', f: true },
+        { p: '5-2', f: true },
+        { p: '6-0', f: false },
+    ],
+};
+
+export default {A, Am, C, D, E, Em};
