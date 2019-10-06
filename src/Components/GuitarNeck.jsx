@@ -27,15 +27,42 @@ class GuitarNeck extends Component {
                 <Chord positions={positions}/>
             </div>
             <h2>{name}</h2>
-            {Object.keys(chordsDictionary).map((item, index) => (<button key={index} onClick={(e) => this.handleClick(chordsDictionary[item].name, e)}>{item}</button>))}
-        </div>);
+            {Object.keys(chordsDictionary).map((item, index) => (
+                <button
+                    key={index}
+                    onClick={(e) => this.props.dispatch({
+                        type: 'CHANGE_CHORD',
+                        payload: {
+                            name: chordsDictionary[item].name,
+                            id: index,
+                            positions: chordsDictionary[item].positions,
+                        },
+                    })}
+                >
+                    {item}
+                </button>
+            ))}
+        </div>
+        );
     };
 }
 console.log(chordsDictionary);
 const mapStateToProps = state => ({
-    chord: changeChord(chordsDictionary.Am),
+    chord: changeChord(chordsDictionary.C),
 });
+
+// const mapDispatchToProps = {
+//     onClick: name => (dispatch) => {
+//         dispatch(changeChord(chordsDictionary[name] || null));
+//     },
+// };
+
+// const handlers = {
+//     onClick: ({ zoneId, onClick }) => () => onClick(zoneId),
+// };
 
 export default connect(
     mapStateToProps,
+    // mapDispatchToProps,
+    // handlers,
 )(GuitarNeck);
