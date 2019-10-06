@@ -66,4 +66,9 @@ const Em = {
     ],
 };
 
-export default {A, Am, C, D, E, Em};
+const none = {
+    name: '',
+    positions: [],
+}
+
+export default {A, Am, C, D, E, Em, none};
