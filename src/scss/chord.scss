@@ -15,7 +15,7 @@
             background-color: #FC0000;
         }
     }
-    @for $i from 0 through 4 {
+    @for $i from 0 through 12 {
        @for $j from 0 through 6 {
             .position-#{$j + 1}-#{$i} {
                 @if($i == 0) {
