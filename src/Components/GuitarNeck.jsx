@@ -30,7 +30,7 @@ class GuitarNeck extends Component {
                 {Object.keys(chordsDictionary).map((item, index) => (
                     <button
                         key={index}
-                        onClick={(e) => this.props.dispatch({
+                        onClick={e => this.props.dispatch({
                             type: 'CHANGE_CHORD',
                             payload: {
                                 name: chordsDictionary[item].name,
@@ -46,8 +46,8 @@ class GuitarNeck extends Component {
         );
     };
 }
-const mapStateToProps = state => ({
-    name: (state && state.chord && state.chord.name) || null,
+const mapStateToProps = ({ chord: { name }}) => ({
+    name,
 });
 
 export default connect(

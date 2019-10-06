@@ -7,14 +7,14 @@ const Chord = ({ positions }) => {
         <div className="chord">
             { positions.map(item => {
                 const c = item.f ? ' filled' : '';
-                return (<div key={item.p} className={`dot position-${item.p}${c}`} />);
+                return <div key={item.p} className={`dot position-${item.p}${c}`} />;
             }) }
         </div>
     ) : null;
 };
 
 const mapStateToProps = state => ({
-    positions: (state && state.chord && state.chord.positions),
+    positions: state && state.chord && state.chord.positions,
 });
 
 export default connect(

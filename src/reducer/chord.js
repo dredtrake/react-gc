@@ -1,5 +1,4 @@
 const chord = (state = [], action) => {
-    console.log('reducer > chord> ', state, action);
     switch (action.type) {
         case 'INIT_CHORD':
         case 'CHANGE_CHORD':
