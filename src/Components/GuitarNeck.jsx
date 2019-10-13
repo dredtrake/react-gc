@@ -16,17 +16,6 @@ class GuitarNeck extends Component {
         const { name } = this.props;
         return (
             <div className="container">
-                <div className="guitar with-nut">
-                    <Cases by="5" />
-                    <String size="1" />
-                    <String size="2" />
-                    <String size="3" />
-                    <String size="4" />
-                    <String size="5" />
-                    <String size="6" />
-                    <Chord />
-                </div>
-                <h2>{ name || '' }</h2>
                 {Object.keys(chordsDictionary).map((item, index) => (
                     <button
                         key={index}
@@ -42,6 +31,17 @@ class GuitarNeck extends Component {
                         {item}
                     </button>
                 ))}
+                <div className="guitar with-nut">
+                    <Cases by="5" />
+                    <String size="1" />
+                    <String size="2" />
+                    <String size="3" />
+                    <String size="4" />
+                    <String size="5" />
+                    <String size="6" />
+                    <Chord />
+                </div>
+                <h2>{ name || '' }</h2>
             </div>
         );
     };
