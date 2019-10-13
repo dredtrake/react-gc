@@ -57,11 +57,11 @@ const C = {
 const Cm = {
     name: 'Cm',
     positions: [
-        { p: '1-1', f: true },
-        { p: '2-2', f: true },
-        { p: '3-3', f: true },
-        { p: '4-3', f: true },
-        { p: '5-1', f: true },
+        { p: '1-3', f: true },
+        { p: '2-4', f: true },
+        { p: '3-5', f: true },
+        { p: '4-5', f: true },
+        { p: '5-3', f: true },
     ],
 };
 
