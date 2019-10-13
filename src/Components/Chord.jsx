@@ -5,9 +5,10 @@ import '../scss/chord.scss';
 const Chord = ({ positions }) => {
     return positions ? (
         <div className="chord">
-            { positions.map(item => {
-                const c = item.f ? ' filled' : '';
-                return <div key={item.p} className={`dot position-${item.p}${c}`} />;
+            { positions.map(({ p }) => {
+                const s = p.split('-');
+                const c = s[1] !== '0' ? ' filled' : '';
+                return <div key={p} className={`dot position-${p}${c}`} />;
             }) }
         </div>
     ) : null;
