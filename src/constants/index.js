@@ -1,165 +1,76 @@
 const A = {
-    name: 'A',
-    positions: [
-        { p: '1-0' },
-        { p: '2-2' },
-        { p: '3-2' },
-        { p: '4-2' },
-        { p: '5-0' },
-    ],
+  name: "A",
+  position: "x02220"
 };
 
 const Am = {
-    name: 'Am',
-    positions: [
-        { p: '1-0' },
-        { p: '2-1' },
-        { p: '3-2' },
-        { p: '4-2' },
-        { p: '5-0' },
-    ],
+  name: "Am",
+  position: "x02210"
 };
 
 const B = {
-    name: 'B',
-    positions: [
-        { p: '1-2' },
-        { p: '2-4' },
-        { p: '3-4' },
-        { p: '4-4' },
-        { p: '5-2' },
-    ],
+  name: "B",
+  position: "x24442"
 };
 
 const Bm = {
-    name: 'Bm',
-    positions: [
-        { p: '1-2' },
-        { p: '2-3' },
-        { p: '3-4' },
-        { p: '4-4' },
-        { p: '5-2' },
-    ],
+  name: "Bm",
+  position: "x24432"
 };
 
 const C = {
-    name: 'C',
-    positions: [
-        { p: '1-0' },
-        { p: '2-1' },
-        { p: '3-0' },
-        { p: '4-2' },
-        { p: '5-3' },
-        { p: '6-0' },
-    ],
+  name: "C",
+  position: "x32010"
 };
 
 const Cm = {
-    name: 'Cm',
-    positions: [
-        { p: '1-3' },
-        { p: '2-4' },
-        { p: '3-5' },
-        { p: '4-5' },
-        { p: '5-3' },
-    ],
+  name: "Cm",
+  position: "x34553"
 };
 
 const D = {
-    name: 'D',
-    positions: [
-        { p: '1-2' },
-        { p: '2-3' },
-        { p: '3-2' },
-        { p: '4-0' },
-    ],
+  name: "D",
+  position: "xx0232"
 };
 
 const Dm = {
-    name: 'Dm',
-    positions: [
-        { p: '1-1' },
-        { p: '2-3' },
-        { p: '3-2' },
-        { p: '4-0' },
-    ],
+  name: "Dm",
+  position: "x02210"
 };
 
 const E = {
-    name: 'E',
-    positions: [
-        { p: '1-0' },
-        { p: '2-0' },
-        { p: '3-1' },
-        { p: '4-2' },
-        { p: '5-2' },
-        { p: '6-0' },
-    ],
+  name: "E",
+  position: "022100"
 };
 
 const Em = {
-    name: 'Em',
-    positions: [
-        { p: '1-0' },
-        { p: '2-0' },
-        { p: '3-0' },
-        { p: '4-2' },
-        { p: '5-2' },
-        { p: '6-0' },
-    ],
+  name: "Em",
+  position: "022000"
 };
 
 const F = {
-    name: 'F',
-    positions: [
-        { p: '1-1' },
-        { p: '2-1' },
-        { p: '3-2' },
-        { p: '4-3' },
-        { p: '5-3' },
-        { p: '6-1' },
-    ],
+  name: "F",
+  position: "133211"
 };
 
 const Fm = {
-    name: 'Fm',
-    positions: [
-        { p: '1-1' },
-        { p: '2-1' },
-        { p: '3-1' },
-        { p: '4-3' },
-        { p: '5-3' },
-        { p: '6-1' },
-    ],
+  name: "Fm",
+  position: "133111"
 };
 
 const G = {
-    name: 'G',
-    positions: [
-        { p: '1-3' },
-        { p: '2-0' },
-        { p: '3-0' },
-        { p: '4-0' },
-        { p: '5-2' },
-        { p: '6-3' },
-    ],
+  name: "G",
+  position: "320003"
 };
 
 const Gm = {
-    name: 'Gm',
-    positions: [
-        { p: '1-3' },
-        { p: '2-3' },
-        { p: '3-3' },
-        { p: '4-5' },
-        { p: '5-5' },
-        { p: '6-3' },
-    ],
+  name: "Gm",
+  position: "355333"
 };
 
 const none = {
-    name: '',
-    positions: [],
-}
+  name: "",
+  positions: []
+};
 
-export default {A, Am, B, Bm, C, Cm, D, Dm, E, Em, G, Gm, F, Fm, none};
+export default { A, Am, B, Bm, C, Cm, D, Dm, E, Em, G, Gm, F, Fm, none };
