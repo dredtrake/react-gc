@@ -1,8 +1,8 @@
 const chord = (state = [], action) => {
+    const { id, name, positions } = action.payload;
     switch (action.type) {
         case 'INIT_CHORD':
         case 'CHANGE_CHORD':
-            const { id, name, positions } = action.payload;
             return {
                 id,
                 name,

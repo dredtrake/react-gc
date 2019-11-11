@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import String from './String';
 import Cases from './Cases';
@@ -8,7 +9,7 @@ import chordsDictionary from '../constants';
 
 class GuitarNeck extends Component {
 
-    handleClick = (id) => {
+    handleClick (id) {
         changeChord(chordsDictionary[id]);
     }
 
@@ -19,7 +20,7 @@ class GuitarNeck extends Component {
                 {Object.keys(chordsDictionary).map((item, index) => (
                     <button
                         key={index}
-                        onClick={e => this.props.dispatch({
+                        onClick={() => this.props.dispatch({
                             type: 'CHANGE_CHORD',
                             payload: {
                                 name: chordsDictionary[item].name,
@@ -44,8 +45,14 @@ class GuitarNeck extends Component {
                 <h2>{ name || '' }</h2>
             </div>
         );
-    };
+    }
 }
+
+GuitarNeck.propTypes = {
+    name: PropTypes.string.isRequired,
+    dispatch: PropTypes.func.isRequired,
+};
+
 const mapStateToProps = ({ chord: { name }}) => ({
     name,
 });
