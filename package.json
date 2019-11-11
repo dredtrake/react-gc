@@ -35,6 +35,12 @@
     ]
   },
   "devDependencies": {
+    "husky": "^3.0.9",
     "node-sass": "^4.12.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   }
 }
