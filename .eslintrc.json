@@ -22,7 +22,10 @@
     "react"
   ],
   "rules": {
+    "eqeqeq": "error",
+    "no-alert": "error",
     "no-console": "warn",
+    "no-eval": "error",
     "jsx-quotes": ["error", "prefer-double"],
     "no-trailing-spaces": "error",
     // "camelCase": "error",
@@ -33,6 +36,8 @@
       "object": true
     }, {
       "enforceForRenamedProperties": false
-    }]
+    }],
+    "require-await": "error",
+    "eol-last": ["error", "always"]
   }
 }
