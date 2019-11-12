@@ -1,7 +1,11 @@
-export const changeChord = (chord) => {
+export const changeChord = (id, chord) => {
+    console.log(id, chord);
     return {
         type: 'CHANGE_CHORD',
-        name: chord.name,
-        positions: chord.positions,
+        payload: {
+            id,
+            name: chord.name,
+            positions: chord.positions,
+        },
     };
 };

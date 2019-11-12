@@ -16,8 +16,12 @@ const Chord = ({ positions }) => {
 };
 
 Chord.propTypes = {
-    positions: PropTypes.array.isRequired,
+    positions: PropTypes.array,
 };
+
+Chord.defaultValue = {
+    positions: {},
+}
 
 const mapStateToProps = state => ({
     positions: state && state.chord && state.chord.positions,
