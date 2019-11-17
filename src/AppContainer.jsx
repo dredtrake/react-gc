@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './index.scss';
 import App from './App';
 import { applyMiddleware, createStore, compose } from 'redux';
@@ -22,10 +21,6 @@ const AppContainer = () => (
         <App />
     </Provider>
 );
-
-AppContainer.propTypes = {
-    store: PropTypes.object.isRequired,
-};
 
 serviceWorker.unregister();
 
